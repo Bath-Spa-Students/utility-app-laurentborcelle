@@ -12,16 +12,16 @@ class TColor:
 class SushiVendingMachine:
     def __init__(self):
         self.menu = {
-            "S1": {"name": "Salmon Nigiri", "price": 25.00, "stock": 20},
-            "S2": {"name": "California Roll", "price": 27.50, "stock": 20},
-            "S3": {"name": "Tuna Sashimi", "price": 28.00, "stock": 20},
-            "S4": {"name": "Ekiben", "price": 25.00, "stock": 20},
+            "S1": {"name": "Salmon Nigiri", "price": 15.00, "stock": 20},
+            "S2": {"name": "California Roll", "price": 17.50, "stock": 20},
+            "S3": {"name": "Tuna Sashimi", "price": 18.00, "stock": 20},
+            "S4": {"name": "Dynamite Roll", "price": 15.00, "stock": 20},
             "S5": {"name": "Marukonouchi Bento", "price": 36.00, "stock": 10},
-            "S6": {"name": "Spicy Salmon", "price": 16.00, "stock": 20},
-            "S7": {"name": "Sweet Potato Crunch", "price": 16.00, "stock": 20},
-            "S8": {"name": "Dynamite Roll", "price": 17.00, "stock": 20},
-            "S9": {"name": "Tempura", "price": 10.00, "stock": 30},
-            "S10": {"name": "Shinobi", "price": 16.00, "stock": 20},
+            "S6": {"name": "Spicy Salmon", "price": 16.00, "stock": 15},
+            "S7": {"name": "Water", "price": 01.00, "stock": 60},
+            "S8": {"name": "Coca-Cola", "price": 01.00, "stock": 50},
+            "S9": {"name": "Sprite", "price": 01.00, "stock": 50},
+            "S10": {"name": "Fanta", "price": 01.00, "stock": 50},
 
         }
         self.total_amount = 0.0
@@ -53,7 +53,7 @@ class SushiVendingMachine:
         for code, item in self.menu.items():
             code_column = f"║        {code}:      ┊"
             item_column = f"\t{item['name']}"
-            price_column = f"┊      ${item['price']:.2f}"
+            price_column = f"┊      AED {item['price']:.2f}"
             stock_column = f"      ┊  \t{item['stock']}                       ║"
 
             print("{:<25}{:<30}{:<20}{:<40}".format(code_column, item_column, price_column, stock_column))
